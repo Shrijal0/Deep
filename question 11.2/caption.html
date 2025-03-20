@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caption</title>
+    <script>
+        function updateCaption(description) {
+            let captionText = document.getElementById("captionText");
+            if (captionText) {
+                captionText.innerText = description;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Caption</h1>
+    <p id="captionText">Select an animal to see its description.</p>
+</body>
+</html>

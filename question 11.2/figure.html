@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure</title>
+    <script>
+        function updateFigure(imageSrc) {
+            let figureImage = document.getElementById("figureImage");
+            if (figureImage) {
+                figureImage.src = imageSrc;
+                figureImage.style.display = "block"; // Ensure the image is visible
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Figure</h1>
+    <img id="figureImage" src="" alt="Selected Image" width="300" style="display: none;">
+</body>
+</html>

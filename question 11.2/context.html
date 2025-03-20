@@ -1,15 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
     <title>Context</title>
-</head>
-<body>
-    <h1>Context</h1>
-    <p id="bird"></p>
-    <P id="d"></P>
-    <p id="animal"></p>
-    <p id="fish"></p>
-</body>
+    <script>
+      window.onload = function () {
+        document.getElementById("birdSection").style.display = "none";
+        document.getElementById("animalSection").style.display = "none";
+        document.getElementById("fishSection").style.display = "none";
+      };
+
+      function updateContent(image, description) {
+        let figureFrame = parent.frames["figure"];
+        let captionFrame = parent.frames["caption"];
+
+        if (figureFrame && figureFrame.window.updateFigure) {
+            figureFrame.window.updateFigure(image);
+        }
+        if (captionFrame && captionFrame.window.updateCaption) {
+            captionFrame.window.updateCaption(description);
+        }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="birdSection">
+      <h1>Bird</h1>
+      <p>
+        <button
+          onclick="updateContent('dhaphey.jpg', 'Dhaphey is a majestic bird found in mountainous regions.')"
+        >
+          DHAPHEY
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="updateContent('pigeon.jpg', 'Pigeons are intelligent birds commonly found in urban areas.')"
+        >
+          Pigeon
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="updateContent('parrot.jpg', 'Parrots are colorful birds known for their ability to mimic sounds.')"
+        >
+          Parrot
+        </button>
+      </p>
+    </div>
+
+    <div id="animalSection">
+      <h1>Animal</h1>
+      <p>
+        <button
+          onclick="updateContent('tiger.jpg', 'Tigers are the largest of the big cats and are known for their powerful build.')"
+        >
+          Tiger
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="updateContent('lion.jpg', 'Lions are social animals, often referred to as the kings of the jungle.')"
+        >
+          Lion
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="updateContent('elephant.jpg', 'Elephants are the largest land animals, known for their intelligence and strong memory.')"
+        >
+          Elephant
+        </button>
+      </p>
+    </div>
+
+    <div id="fishSection">
+      <h1>Fish</h1>
+      <p>
+        <button
+          onclick="updateContent('guppy.jpg', 'Guppy fish is a small, colorful freshwater fish.')"
+        >
+          Guppy Fish
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="updateContent('angelfish.jpg', 'Angel fish is a graceful freshwater fish with unique fin shapes.')"
+        >
+          Angel Fish
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="updateContent('goldfish.jpg', 'Goldfish is a popular pet fish known for its golden color.')"
+        >
+          Goldfish
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="updateContent('molly.jpg', 'Molly fish is a hardy freshwater fish that comes in various colors.')"
+        >
+          Molly Fish
+        </button>
+      </p>
+    </div>
+  </body>
 </html>
