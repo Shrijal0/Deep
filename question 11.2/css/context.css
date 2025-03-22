@@ -1,0 +1,37 @@
+#birdSection, #animalSection, #fishSection {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+
+p {
+    text-align: center; 
+}
+
+button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block; 
+}
+
+button:hover {
+    background-color: #005f7f;
+}

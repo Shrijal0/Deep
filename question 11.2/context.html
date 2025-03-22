@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Context</title>
+    <link rel="stylesheet" type="text/css" href="css/context.css">
     <script>
       window.onload = function () {
         document.getElementById("birdSection").style.display = "none";
@@ -10,40 +11,37 @@
         document.getElementById("fishSection").style.display = "none";
       };
 
-      function updateContent(image, description) {
+      function updateContent(image, description, title) {
         let figureFrame = parent.frames["figure"];
         let captionFrame = parent.frames["caption"];
 
         if (figureFrame && figureFrame.window.updateFigure) {
-            figureFrame.window.updateFigure(image);
+          figureFrame.window.updateFigure(image, title); 
         }
         if (captionFrame && captionFrame.window.updateCaption) {
-            captionFrame.window.updateCaption(description);
+          captionFrame.window.updateCaption(description);
         }
-    }
+      }
     </script>
   </head>
   <body>
     <div id="birdSection">
       <h1>Bird</h1>
       <p>
-        <button
-          onclick="updateContent('dhaphey.jpg', 'Dhaphey is a majestic bird found in mountainous regions.')"
-        >
-          DHAPHEY
+        <button onclick="updateContent('img/bird/Danphe.png', 
+        'The Danphe, also known as the Himalayan Monal, is the national bird of Nepal. It is known for its strikingly colorful plumage and thrives in the cold mountainous regions of the Himalayas. Males are particularly vibrant with iridescent feathers, while females have more subdued brownish tones for camouflage. This bird is an important symbol of natural beauty in Nepal, often found in high-altitude forests where it feeds on roots, insects, and berries.', 'Danphe')">
+          Danphe
         </button>
       </p>
       <p>
-        <button
-          onclick="updateContent('pigeon.jpg', 'Pigeons are intelligent birds commonly found in urban areas.')"
-        >
+        <button onclick="updateContent('img/bird/pigeon.png', 
+        'Pigeons are highly adaptable birds found worldwide, especially in urban environments. They have an incredible homing ability, allowing them to navigate long distances with ease. Historically, pigeons have been used as messengers, carrying important messages across vast distances during wars. Today, they are commonly seen in cities and parks, where they thrive on grains and human-provided food.', 'Pigeon')">
           Pigeon
         </button>
       </p>
       <p>
-        <button
-          onclick="updateContent('parrot.jpg', 'Parrots are colorful birds known for their ability to mimic sounds.')"
-        >
+        <button onclick="updateContent('img/bird/parrot.png', 
+        'Parrots are intelligent and social birds known for their ability to mimic human speech. They come in a variety of colors and species, ranging from the small budgerigar to the large macaws. Parrots are highly trainable and can form strong bonds with humans, making them popular pets. In the wild, they live in tropical and subtropical regions, often in large, noisy flocks, where they feed on fruits, nuts, and seeds.', 'Parrot')">
           Parrot
         </button>
       </p>
@@ -52,23 +50,20 @@
     <div id="animalSection">
       <h1>Animal</h1>
       <p>
-        <button
-          onclick="updateContent('tiger.jpg', 'Tigers are the largest of the big cats and are known for their powerful build.')"
-        >
+        <button onclick="updateContent('img/animal/tiger.png', 
+        'The tiger is the largest member of the cat family and a powerful predator known for its strength, agility, and striking orange coat with black stripes. Tigers are solitary animals that primarily hunt large prey such as deer and wild boar. They rely on stealth and ambush tactics to catch their prey. Found mainly in forests across Asia, they are sadly endangered due to habitat loss and poaching for their fur and body parts.', 'Tiger')">
           Tiger
         </button>
       </p>
       <p>
-        <button
-          onclick="updateContent('lion.jpg', 'Lions are social animals, often referred to as the kings of the jungle.')"
-        >
+        <button onclick="updateContent('img/animal/lion.png', 
+        'Lions are the only truly social big cats, living in groups called prides that consist of females, their cubs, and a few males. Known as the king of the jungle, lions are apex predators primarily found in the grasslands and savannas of Africa. They rely on teamwork when hunting, often targeting large herbivores like zebras and wildebeests. Lions spend a significant portion of their day resting, with females handling most of the hunting.', 'Lion')">
           Lion
         </button>
       </p>
       <p>
-        <button
-          onclick="updateContent('elephant.jpg', 'Elephants are the largest land animals, known for their intelligence and strong memory.')"
-        >
+        <button onclick="updateContent('img/animal/elephant.png', 
+        'Elephants are the largest land mammals, known for their intelligence, strong memory, and social bonds. They are herbivores and play a crucial role in their ecosystems by shaping landscapes and creating water sources for other animals. Elephants communicate using low-frequency sounds and gestures. Sadly, they are threatened by habitat destruction and poaching for their ivory tusks, leading to conservation efforts to protect these magnificent creatures.', 'Elephant')">
           Elephant
         </button>
       </p>
@@ -77,30 +72,26 @@
     <div id="fishSection">
       <h1>Fish</h1>
       <p>
-        <button
-          onclick="updateContent('guppy.jpg', 'Guppy fish is a small, colorful freshwater fish.')"
-        >
+        <button onclick="updateContent('img/fish/guppy.png', 
+        'Guppy fish are small, colorful freshwater fish native to South America. They are highly adaptable and are commonly found in home aquariums due to their vibrant colors and ease of care. Guppies are livebearers, meaning they give birth to live young rather than laying eggs. They are known for their rapid reproduction and are often used in scientific research to study evolution and genetics.', 'Guppy Fish')">
           Guppy Fish
         </button>
       </p>
       <p>
-        <button
-          onclick="updateContent('angelfish.jpg', 'Angel fish is a graceful freshwater fish with unique fin shapes.')"
-        >
-          Angel Fish
+        <button onclick="updateContent('img/fish/angelfish.png', 
+        'Angelfish are graceful freshwater fish known for their distinctive triangular fins and elegant swimming patterns. They originate from the Amazon River basin and are popular in home aquariums. Although generally peaceful, they can become territorial, especially during breeding. Angelfish prefer slow-moving waters and thrive in well-maintained tanks with plenty of plants and hiding spots.', 'Angelfish')">
+          Angelfish
         </button>
       </p>
       <p>
-        <button
-          onclick="updateContent('goldfish.jpg', 'Goldfish is a popular pet fish known for its golden color.')"
-        >
+        <button onclick="updateContent('img/fish/goldfish.png', 
+        'Goldfish are one of the most popular pet fish in the world. Originating from East Asia, they were selectively bred for their golden coloration. Goldfish are highly adaptable and can live for decades if properly cared for. Despite their simple appearance, they are intelligent fish capable of recognizing their owners and even learning tricks. They require a well-maintained aquarium with clean water and proper filtration.', 'Goldfish')">
           Goldfish
         </button>
       </p>
       <p>
-        <button
-          onclick="updateContent('molly.jpg', 'Molly fish is a hardy freshwater fish that comes in various colors.')"
-        >
+        <button onclick="updateContent('img/fish/molly.png', 
+        'Molly fish are small, hardy freshwater fish that come in a variety of colors, including black, orange, and silver. They are livebearers, meaning they give birth to live young, making them a favorite for breeding in home aquariums. Mollies are social fish that prefer to live in groups, and they can thrive in both freshwater and slightly brackish environments. They are easy to care for, making them ideal for beginner aquarists.', 'Molly Fish')">
           Molly Fish
         </button>
       </p>

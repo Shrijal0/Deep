@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figure</title>
+    <link rel="stylesheet" type="text/css" href="css/figure.css">
     <script>
-        function updateFigure(imageSrc) {
+        function updateFigure(imageSrc, title) {
             let figureImage = document.getElementById("figureImage");
+            let figureTitle = document.getElementById("figureTitle");
+
             if (figureImage) {
                 figureImage.src = imageSrc;
-                figureImage.style.display = "block"; // Ensure the image is visible
+                figureImage.style.display = "block"; 
+            }
+
+            if (figureTitle) {
+                figureTitle.textContent = title; 
             }
         }
     </script>
 </head>
 <body>
-    <h1>Figure</h1>
+    <h1 id="figureTitle">Figure</h1>
     <img id="figureImage" src="" alt="Selected Image" width="300" style="display: none;">
 </body>
 </html>
+
